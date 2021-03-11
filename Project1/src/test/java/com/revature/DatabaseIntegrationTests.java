@@ -3,6 +3,7 @@ package com.revature;
 import static org.junit.Assert.*;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.junit.After;
@@ -29,6 +30,8 @@ public class DatabaseIntegrationTests {
 	 User testUser =  new User();
 	 User testMan = new User();
 	 Reimbursement testReimb = new Reimbursement();
+	 
+	 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd'T'HH:mm:ss.SSSSSS");
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -41,14 +44,12 @@ public class DatabaseIntegrationTests {
 
 	@Before
 	public void setUp() throws Exception {
-		testUser.setId(1);
 		testUser.setUsername("test");
 		testUser.setPassword("pass");
 		testUser.setFname("test1");
 		testUser.setLname("tester");
 		testUser.setEmail("test@email.com");
 		testUser.setRoleId(UserRole.EMPLOYEE);
-		testMan.setId(2);
 		testMan.setUsername("mantest");
 		testMan.setPassword("manpass");
 		testMan.setFname("test1man");
@@ -57,12 +58,13 @@ public class DatabaseIntegrationTests {
 		testMan.setRoleId(UserRole.FINANCE_MANAGER);
 		udao.addUser(testUser);
 		udao.addUser(testMan);
-		testReimb.setId(1);
 		testReimb.setAmount(28109.18);
+		testUser = udao.getUser(testUser.getUsername(), testUser.getPassword());
+		testMan =udao.getUser(testMan.getUsername(), testMan.getPassword());
 		testReimb.setAuthor(testUser);
 		testReimb.setResolver(null);
 		testReimb.setDescription("For bread.");
-		testReimb.setSubmittedTs(LocalDateTime.now());
+		testReimb.setSubmittedTs(LocalDateTime.now().withNano(0));
 		testReimb.setResolvedTs(null);
 		testReimb.setStatusid(ReimbStatus.PENDING);
 		testReimb.setType(ReimbType.FOOD);
@@ -79,6 +81,20 @@ public class DatabaseIntegrationTests {
 	public void testAddReimbursement() {
 		Reimbursement actual = rdao.getReimbursement(testReimb.getId());
 		assertEquals(testReimb, actual);
+	}
+	
+	@Test
+	public void testGetAllReimbursements() {
+		Reimbursement secondReimb = new Reimbursement();
+		secondReimb.setAmount(28109.18);
+		secondReimb.setAuthor(testUser);
+		secondReimb.setResolver(null);
+		secondReimb.setDescription("For bread.");
+		secondReimb.setSubmittedTs(LocalDateTime.now().withNano(0));
+		secondReimb.setResolvedTs(null);
+		secondReimb.setStatusid(ReimbStatus.PENDING);
+		secondReimb.setType(ReimbType.FOOD);
+		
 	}
 	
 
@@ -116,15 +132,14 @@ public class DatabaseIntegrationTests {
 	@Test
 	public void testDeleteUser() {
 		User secondUser = new User();
-		secondUser.setId(2);
-		secondUser.setUsername("test2");
-		secondUser.setPassword("pass");
+		secondUser.setUsername("test3");
+		secondUser.setPassword("pass3");
 		secondUser.setRoleId(UserRole.EMPLOYEE);
-		secondUser.setEmail("test2@email.com");
-		udao.addUser(secondUser);
+		secondUser.setEmail("test3@email.com");
+		secondUser = udao.addUser(secondUser);
 		boolean success =  udao.removeUser(secondUser);
 		if(success) {
-			assertEquals(1, udao.getAllUsers().size());
+			assertEquals(2, udao.getAllUsers().size());
 		} else {
 			fail("unable to delete account");
 		}
@@ -133,12 +148,11 @@ public class DatabaseIntegrationTests {
 	@Test (expected = UsernameAlreadyExistsException.class)
 	public void testUserAlreadyExist()  {
 		User secondUser = new User();
-		secondUser.setId(1);
 		secondUser.setUsername("test");
 		secondUser.setPassword("pass");
 		secondUser.setRoleId(UserRole.EMPLOYEE);
 		secondUser.setEmail("test@email.com");
-		udao.addUser(secondUser);
+		secondUser = udao.addUser(secondUser);
 
 		List<User> ulist = udao.getAllUsers();
 		assertEquals(1, ulist.size());
@@ -147,24 +161,22 @@ public class DatabaseIntegrationTests {
 	
 	@Test
 	public void testGetAllUsers() {
-		User secondUser = new User();
-		secondUser.setId(2);
-		secondUser.setUsername("test2");
-		secondUser.setPassword("pass");
-		secondUser.setRoleId(UserRole.EMPLOYEE);
-		secondUser.setEmail("test2@email.com");
-		udao.addUser(secondUser);
 		User thirdUser = new User();
-		thirdUser.setId(3);
-		thirdUser.setUsername("test3");
+		thirdUser.setUsername("test4");
 		thirdUser.setPassword("pass");
-		thirdUser.setRoleId(UserRole.FINANCE_MANAGER);
-		thirdUser.setEmail("test3@email.com");
-		udao.addUser(thirdUser);
+		thirdUser.setRoleId(UserRole.EMPLOYEE);
+		thirdUser.setEmail("test4@email.com");
+		thirdUser = udao.addUser(thirdUser);
+		User fourthUser = new User();
+		fourthUser.setUsername("test5");
+		fourthUser.setPassword("pass");
+		fourthUser.setRoleId(UserRole.FINANCE_MANAGER);
+		fourthUser.setEmail("test5@email.com");
+		fourthUser = udao.addUser(fourthUser);
 		List<User> ulist = udao.getAllUsers();
-		assertEquals(3, ulist.size());
-		udao.removeUser(secondUser);
+		assertEquals(4, ulist.size());
 		udao.removeUser(thirdUser);
+		udao.removeUser(fourthUser);
 		
 	}
 	

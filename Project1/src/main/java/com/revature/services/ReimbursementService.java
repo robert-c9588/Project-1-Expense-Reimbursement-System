@@ -12,6 +12,8 @@ public class ReimbursementService {
 	}
 	
 	public Reimbursement createNewReimbursement(User u) {
+		Reimbursement reimb = new Reimbursement();
+		reimb.setAmount(null);
 		
 		return null;
 	}

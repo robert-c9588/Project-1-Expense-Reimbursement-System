@@ -68,5 +68,10 @@ public interface ReimbursmentDao {
 	 */
 	public boolean removeReimbursement(Reimbursement reimb);
 	
-
+	/**
+	 * Retrieves id of reimb that was generated automatically from persistence layer
+	 * @param reimb the reimbursement that needs the id
+	 * @return integer and sets it to the reimb
+	 */
+	public Reimbursement getReimbursmentId(Reimbursement reimb);
 }

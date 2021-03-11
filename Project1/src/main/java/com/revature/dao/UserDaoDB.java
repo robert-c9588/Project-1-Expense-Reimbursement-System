@@ -32,37 +32,45 @@ public class UserDaoDB implements UserDao {
 		// Need to throw exception if id/username/password/roleId is null
 		User u = user;
 
-		if (u != null && u.getId() != null && !u.getUsername().equals(null) && !u.getPassword().equals(null)
-				&& u.getRoleId() != null && !u.getEmail().equals(null)) {
-			try {
-				String sql = "INSERT INTO ers_users VALUES(?,?,?,?,?,?,?)";
+		if (!checkUser(user)) {
+			if (u != null && !u.getUsername().equals(null) && !u.getPassword().equals(null) && u.getRoleId() != null
+					&& !u.getEmail().equals(null)) {
+				try {
+					String sql = "INSERT INTO ers_users (ers_username,ers_password,user_first_name,user_last_name,user_email,user_role_id) VALUES(?,?,?,?,?,?)";
 
-				PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
-				ps.setInt(1, u.getId());
-				ps.setString(2, u.getUsername());
-				ps.setString(3, u.getPassword());
-				ps.setString(4, u.getFname());
-				ps.setString(5, u.getLname());
-				ps.setString(6, u.getEmail());
+					PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
+//				if (u.getId()!=null) {
+//					ps.setInt(1, u.getId());
+//				}else {
+//					ps.setNull(1, java.sql.Types.INTEGER);
+//				}
+					ps.setString(1, u.getUsername());
+					ps.setString(2, u.getPassword());
+					ps.setString(3, u.getFname());
+					ps.setString(4, u.getLname());
+					ps.setString(5, u.getEmail());
 
-				if (u.getRoleId().equals(UserRole.EMPLOYEE)) {
-					ps.setInt(7, 1);
-				} else {
-					ps.setInt(7, 1);
+					if (u.getRoleId().equals(UserRole.EMPLOYEE)) {
+						ps.setInt(6, 1);
+					} else {
+						ps.setInt(6, 1);
+					}
+					ps.execute();
+					ps.close();
+					ps.getConnection().close();
+					ReimbursementSystemDriver.logger.info("Write success");
+					u = getUserId(u);
+					return u;
+
+				} catch (SQLException e) {
+					ReimbursementSystemDriver.logger.error("Write failed");
+					ReimbursementSystemDriver.logger.debug("Unable write to db", e);
 				}
-				ps.execute();
-				ps.close();
-				ps.getConnection().close();
-				ReimbursementSystemDriver.logger.info("Write success");
-				return u;
-
-			} catch (SQLException e) {
-				ReimbursementSystemDriver.logger.error("Write failed");
-				ReimbursementSystemDriver.logger.debug("Unable write to db", e);
+			} else {
+				RuntimeException rte = new InvalidUserSettingsException(
+						"Settings of user are invalid. New user not added");
+				throw rte;
 			}
-		} else {
-			RuntimeException rte = new InvalidUserSettingsException("Settings of user are invalid. New user not added");
-			throw rte;
 		}
 
 		RuntimeException rte = new UsernameAlreadyExistsException(
@@ -217,21 +225,21 @@ public class UserDaoDB implements UserDao {
 		if (u != null && u.getId() != null && !u.getUsername().equals(null) && !u.getPassword().equals(null)
 				&& u.getRoleId() != null) {
 
-			String sql = "UPDATE ers_users SET ers_users_id=?,ers_username=?,ers_password=?,user_first_name=?,user_last_name=?,user_email=?,user_role_id=?";
+			String sql = "UPDATE ers_users SET ers_username=?,ers_password=?,user_first_name=?,user_last_name=?,user_email=?,user_role_id=? WHERE ers_users_id=?";
 			try {
 				PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
 
-				ps.setInt(1, user.getId());
-				ps.setString(2, user.getUsername());
-				ps.setString(3, user.getPassword());
-				ps.setString(4, user.getFname());
-				ps.setString(5, user.getLname());
-				ps.setString(6, user.getEmail());
+				ps.setInt(7, user.getId());
+				ps.setString(1, user.getUsername());
+				ps.setString(2, user.getPassword());
+				ps.setString(3, user.getFname());
+				ps.setString(4, user.getLname());
+				ps.setString(5, user.getEmail());
 
 				if (user.getRoleId().equals(UserRole.EMPLOYEE)) {
-					ps.setInt(7, 1);
+					ps.setInt(6, 1);
 				} else {
-					ps.setInt(7, 1);
+					ps.setInt(6, 1);
 				}
 				ps.execute();
 				ps.close();
@@ -252,7 +260,7 @@ public class UserDaoDB implements UserDao {
 
 	@Override
 	public boolean removeUser(User user) {
-		User u = getUser(user.getId());
+		User u = user;
 		if (u != null) {
 			try {
 				String sql = "DELETE FROM ers_users WHERE  ers_users_id=?";
@@ -272,6 +280,33 @@ public class UserDaoDB implements UserDao {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public boolean checkUser(User user) {
+		User u = user;
+		try {
+			String sql = "SELECT count(1) FROM ers_users eu WHERE ers_username=?";
+			PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
+
+			ps.setString(1, u.getUsername());
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				if (rs.getInt(1) == 1) {
+					return true;
+				}
+			}
+		} catch (SQLException e) {
+
+		}
+		return false;
+	}
+
+	@Override
+	public User getUserId(User user) {
+		User u = getUser(user.getUsername(), user.getPassword());
+		return u;
+
 	}
 
 }

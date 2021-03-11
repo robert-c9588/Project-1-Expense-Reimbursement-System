@@ -57,4 +57,18 @@ public interface UserDao {
 	 * @return true if successful; false if not
 	 */
 	public boolean removeUser(User u);
+	
+	/**
+	 * Checks if a user exists
+	 * @param u the user to check
+	 * @return true if user found; false if not
+	 */
+	public boolean checkUser(User user);
+	
+	/**
+	 * Returns a user with their id 
+	 * @param user that needs their id 
+	 * @return user with their id set
+	 */
+	public User getUserId(User user);
 }
