@@ -1,0 +1,630 @@
+2021-03-06 22:52:02 ERROR ReimbursementSystemDriver:60 - Write failed
+2021-03-06 22:52:08 DEBUG ReimbursementSystemDriver:61 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: insert or update on table "ers_users" violates foreign key constraint "user_roles_fk"
+  Detail: Key (user_role_id)=(1) is not present in table "ers_user_roles".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:53)
+	at com.revature.DatabaseIntegrationTests.setUp(DatabaseIntegrationTests.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-06 22:54:56 ERROR ReimbursementSystemDriver:60 - Write failed
+2021-03-06 22:55:17 DEBUG ReimbursementSystemDriver:61 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: insert or update on table "ers_users" violates foreign key constraint "user_roles_fk"
+  Detail: Key (user_role_id)=(1) is not present in table "ers_user_roles".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:53)
+	at com.revature.DatabaseIntegrationTests.setUp(DatabaseIntegrationTests.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-06 23:46:30 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-06 23:46:30 ERROR ReimbursementSystemDriver:111 - Read failed
+2021-03-06 23:46:30 DEBUG ReimbursementSystemDriver:112 - Unable read from db
+org.postgresql.util.PSQLException: The column index is out of range: 2, number of columns: 1.
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkColumnIndex(AbstractJdbc2ResultSet.java:2680)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkResultSet(AbstractJdbc2ResultSet.java:2697)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.getString(AbstractJdbc2ResultSet.java:1872)
+	at com.revature.dao.UserDaoDB.getUser(UserDaoDB.java:87)
+	at com.revature.DatabaseIntegrationTests.testAddUser(DatabaseIntegrationTests.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-06 23:46:30 ERROR ReimbursementSystemDriver:111 - Read failed
+2021-03-06 23:46:30 DEBUG ReimbursementSystemDriver:112 - Unable read from db
+org.postgresql.util.PSQLException: The column index is out of range: 2, number of columns: 1.
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkColumnIndex(AbstractJdbc2ResultSet.java:2680)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkResultSet(AbstractJdbc2ResultSet.java:2697)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.getString(AbstractJdbc2ResultSet.java:1872)
+	at com.revature.dao.UserDaoDB.getUser(UserDaoDB.java:87)
+	at com.revature.dao.UserDaoDB.removeUser(UserDaoDB.java:262)
+	at com.revature.DatabaseIntegrationTests.tearDown(DatabaseIntegrationTests.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-06 23:56:33 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-06 23:56:33 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-06 23:56:33 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-06 23:56:34 INFO  ReimbursementSystemDriver:273 - Delete success
+2021-03-07 00:05:23 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-07 00:05:23 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:05:23 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:05:24 INFO  ReimbursementSystemDriver:273 - Delete success
+2021-03-07 00:05:24 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-07 00:05:24 ERROR ReimbursementSystemDriver:161 - Read failed
+2021-03-07 00:05:24 DEBUG ReimbursementSystemDriver:162 - Unable read from db
+org.postgresql.util.PSQLException: The column index is out of range: 2, number of columns: 1.
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkColumnIndex(AbstractJdbc2ResultSet.java:2680)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.checkResultSet(AbstractJdbc2ResultSet.java:2697)
+	at org.postgresql.jdbc2.AbstractJdbc2ResultSet.getString(AbstractJdbc2ResultSet.java:1872)
+	at com.revature.dao.UserDaoDB.getUser(UserDaoDB.java:135)
+	at com.revature.DatabaseIntegrationTests.testLogin(DatabaseIntegrationTests.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-07 00:05:24 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:05:24 INFO  ReimbursementSystemDriver:273 - Delete success
+2021-03-07 00:06:00 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-07 00:06:00 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:06:00 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:06:00 INFO  ReimbursementSystemDriver:273 - Delete success
+2021-03-07 00:06:00 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-07 00:06:01 INFO  ReimbursementSystemDriver:154 - User successfully read from db
+2021-03-07 00:06:01 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-07 00:06:01 INFO  ReimbursementSystemDriver:273 - Delete success
+2021-03-07 21:28:29 INFO  ReimbursementSystemDriver:55 - Write success
+2021-03-07 21:28:29 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:29 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:29 INFO  ReimbursementSystemDriver:268 - Delete success
+2021-03-07 21:28:40 INFO  ReimbursementSystemDriver:55 - Write success
+2021-03-07 21:28:40 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:40 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:40 INFO  ReimbursementSystemDriver:268 - Delete success
+2021-03-07 21:28:40 INFO  ReimbursementSystemDriver:55 - Write success
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:155 - User successfully read from db
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:268 - Delete success
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:55 - Write success
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:105 - User successfully read from db
+2021-03-07 21:28:41 INFO  ReimbursementSystemDriver:268 - Delete success
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-07 21:29:51 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:29:52 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:29:52 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:29:52 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:29:52 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:29:52 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:34:52 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:34:52 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:34:53 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:34:54 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:34:54 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:34:54 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:34:54 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:34:54 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:34:55 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:34:55 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:36:23 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:24 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:36:25 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:36:25 ERROR ReimbursementSystemDriver:57 - Write failed
+2021-03-07 21:36:25 DEBUG ReimbursementSystemDriver:58 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "ers_users_pkey"
+  Detail: Key (ers_users_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:50)
+	at com.revature.DatabaseIntegrationTests.testUserAlreadyExist(DatabaseIntegrationTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-07 21:36:25 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:25 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:45 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:36:45 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:36:46 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:36:46 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:37:06 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:37:18 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:37:18 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:37:19 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 21:40:36 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 21:41:34 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 21:41:45 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 21:41:54 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:04:06 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:04:21 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:04:21 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:04:24 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:05:52 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:05:57 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:05:57 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:05:58 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:19:06 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:19:06 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:19:06 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:09 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:09 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:09 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:36 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:36 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:36 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:37 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:37 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:31:37 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:37 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:50 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:50 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:50 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:50 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:50 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:51 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:31:52 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:31:53 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:32:12 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:13 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-07 22:32:14 ERROR ReimbursementSystemDriver:57 - Write failed
+2021-03-07 22:32:14 DEBUG ReimbursementSystemDriver:58 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "ers_users_pkey"
+  Detail: Key (ers_users_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:50)
+	at com.revature.DatabaseIntegrationTests.testUserAlreadyExist(DatabaseIntegrationTests.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-07 22:32:14 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:19 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:20 ERROR ReimbursementSystemDriver:57 - Write failed
+2021-03-08 07:23:20 DEBUG ReimbursementSystemDriver:58 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "ers_users_pkey"
+  Detail: Key (ers_users_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:50)
+	at com.revature.DatabaseIntegrationTests.testUserAlreadyExist(DatabaseIntegrationTests.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-08 07:23:20 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:20 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:28 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:28 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:28 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:28 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:151 - User successfully read from db
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:29 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 07:23:30 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 07:23:30 ERROR ReimbursementSystemDriver:57 - Write failed
+2021-03-08 07:23:30 DEBUG ReimbursementSystemDriver:58 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "ers_users_pkey"
+  Detail: Key (ers_users_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:50)
+	at com.revature.DatabaseIntegrationTests.testUserAlreadyExist(DatabaseIntegrationTests.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-08 07:23:31 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 07:23:31 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:32:40 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:32:40 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:32:40 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:32:40 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:35:17 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:35:17 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:35:18 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:35:18 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:36:53 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:36:53 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:38:25 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:38:25 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:38:25 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:38:25 INFO  ReimbursementSystemDriver:196 - User successfully read from db
+2021-03-08 09:38:25 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:38:26 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:38:26 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:38:26 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:38:26 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:38:26 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:42:44 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:42:44 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:42:44 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:42:44 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-08 09:43:40 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:44:39 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:45:50 INFO  ReimbursementSystemDriver:53 - Write success
+2021-03-08 09:45:50 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:45:50 INFO  ReimbursementSystemDriver:239 - Write success
+2021-03-08 09:45:50 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:45:50 INFO  ReimbursementSystemDriver:101 - User successfully read from db
+2021-03-08 09:45:51 INFO  ReimbursementSystemDriver:264 - Delete success
+2021-03-10 12:39:48 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-10 12:39:48 ERROR ReimbursementSystemDriver:60 - Write failed
+2021-03-10 12:39:48 DEBUG ReimbursementSystemDriver:61 - Unable write to db
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "ers_users_pkey"
+  Detail: Key (ers_users_id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:53)
+	at com.revature.DatabaseIntegrationTests.setUp(DatabaseIntegrationTests.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-10 12:39:48 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-10 12:39:48 INFO  ReimbursementSystemDriver:266 - Delete success
+2021-03-10 12:40:56 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-10 12:40:56 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-10 12:40:56 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-10 12:40:57 INFO  ReimbursementSystemDriver:266 - Delete success
+2021-03-10 12:40:57 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-10 12:40:57 INFO  ReimbursementSystemDriver:266 - Delete success
+2021-03-10 12:45:08 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-10 12:45:08 INFO  ReimbursementSystemDriver:56 - Write success
+2021-03-10 12:45:09 ERROR ReimbursementSystemDriver:99 - Write failed
+2021-03-10 12:45:09 DEBUG ReimbursementSystemDriver:100 - Unable to write to db
+org.postgresql.util.PSQLException: ERROR: column "reimb_receipt" is of type bytea but expression is of type integer
+  Hint: You will need to rewrite or cast the expression.
+  Position: 55
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.dao.ReimbursementDaoDB.addReimbursment(ReimbursementDaoDB.java:91)
+	at com.revature.DatabaseIntegrationTests.setUp(DatabaseIntegrationTests.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-10 12:45:09 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-10 12:45:09 INFO  ReimbursementSystemDriver:266 - Delete success
+2021-03-10 12:45:09 INFO  ReimbursementSystemDriver:104 - User successfully read from db
+2021-03-10 12:45:09 INFO  ReimbursementSystemDriver:266 - Delete success
