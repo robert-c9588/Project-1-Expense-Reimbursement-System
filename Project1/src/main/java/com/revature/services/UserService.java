@@ -51,21 +51,17 @@ public class UserService {
 	 * 
 	 */
 	public void register(User newUser) {
-		User nu = null;
 		try {
-			nu = userDao.addUser(newUser);
-		} catch (UsernameAlreadyExistsException|InvalidUserSettingsException e) {
+			userDao.addUser(newUser);
+		} catch (UsernameAlreadyExistsException e) {
 			ReimbursementSystemDriver.logger.error("Register failed");
-			ReimbursementSystemDriver.logger.debug("Unable to register new user: '" + newUser.getUsername() + "'",e);
+			ReimbursementSystemDriver.logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+			throw e;
+		} catch (InvalidUserSettingsException e) {
+			ReimbursementSystemDriver.logger.error("Register failed");
+			ReimbursementSystemDriver.logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+			throw e;
 		}
-		//Verify user was created.
-		try {
-			 userDao.getUser(nu.getId());//this will throw the error if the user is not found in database. 
-		} catch (InvalidCredentialsException e){
-			ReimbursementSystemDriver.logger.error("Retrieve new user failed");
-			ReimbursementSystemDriver.logger.debug("User: '"+ newUser.getUsername() + "'", e);
-		}
-		
 		ReimbursementSystemDriver.logger.info("Registered new user");
 	}
 

@@ -51,11 +51,6 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 						+ " reimb_description, reimb_author, reimb_resolver, reimb_status_id, reimb_type_id) VALUES (?,?,?,?,?,?,?,?)";
 				PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
 
-//				if (r.getId() != null) {
-//					ps.setInt(1, r.getId());
-//				} else {
-//					ps.setNull(1, java.sql.Types.INTEGER);
-//				}
 				ps.setDouble(1, r.getAmount());
 				ps.setTimestamp(2, Timestamp.valueOf(r.getSubmittedTs()));
 				if (r.getResolvedTs() != null) {

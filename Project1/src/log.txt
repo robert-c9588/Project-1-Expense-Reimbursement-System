@@ -4210,3 +4210,1087 @@ com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' alre
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 12:54:58 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 12:54:58 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 12:54:58 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 12:54:58 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 12:55:13 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 12:55:16 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 12:55:35 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 12:55:36 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:48:06 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:48:06 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:48:06 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:48:07 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:07 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:48:07 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 15:48:07 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:48:07 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testRegisterAndLoginUser(ServicesTests.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:48:32 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:48:32 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:33 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:48:33 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 15:48:33 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:33 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:48:33 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:48:33 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:48:33 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:48:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 15:48:35 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 15:49:51 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:49:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:49:51 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:49:51 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 15:49:53 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:49:53 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:50:02 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:50:18 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:50:46 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:52:04 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:52:04 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:52:04 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 15:52:05 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 15:52:37 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 15:52:37 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:52:37 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 15:52:37 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 15:52:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 15:52:39 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 15:52:45 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 15:52:46 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:29:46 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:29:46 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:29:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:29:51 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:29:54 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:29:54 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:30:08 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:30:56 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:30:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:30:56 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:30:56 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:30:59 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:30:59 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:31:10 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:31:10 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:40:32 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:40:32 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:32 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:40:32 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:40:33 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:33 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:40:33 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:40:33 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:40:33 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:40:33 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:34 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:40:35 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:40:35 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:40:35 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:40:35 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:41:18 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:41:18 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:41:18 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:43:03 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:43:03 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:43:04 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:43:04 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:43:13 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:43:17 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:43:42 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:43:43 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:43:52 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:44:56 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:44:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:44:57 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:44:57 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:44:57 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:44:57 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:44:57 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:44:57 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:44:57 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:45:19 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:45:19 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:45:19 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:45:19 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:45:21 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:45:21 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:46:27 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:46:27 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:46:27 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:46:27 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:46:34 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:46:46 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:48:52 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:48:52 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:48:53 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:48:53 INFO  ReimbursementSystemDriver:71 - Registered new user
+2021-03-11 19:48:59 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:49:05 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:50:14 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:50:14 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:50:15 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-11 19:50:15 INFO  ReimbursementSystemDriver:69 - Registered new user
+2021-03-11 19:50:15 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:50:15 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:50:15 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:50:15 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:51:29 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:51:29 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:29 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:30 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:30 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:51:30 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:51:30 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:51:30 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:56 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:51:56 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:51:56 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:56 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:51:56 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:51:56 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:51:56 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:57 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:51:57 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testRegisterAndLoginUser(ServicesTests.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:51:57 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:54:02 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:54:03 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:54:03 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:61 - Registered new user
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:54:03 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:58:51 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:58:52 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:58:52 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:58:52 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 19:59:15 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:59:15 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:59:15 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 19:59:21 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 19:59:22 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:59:22 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 19:59:23 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:59:23 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:59:28 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 19:59:28 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 19:59:45 ERROR ReimbursementSystemDriver:58 - Register failed
+2021-03-11 19:59:47 DEBUG ReimbursementSystemDriver:59 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:56)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 19:59:54 INFO  ReimbursementSystemDriver:64 - Registered new user
+2021-03-11 20:00:05 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:00:05 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:00:59 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:00:59 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:00:59 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:01:19 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:01:20 ERROR ReimbursementSystemDriver:57 - Register failed
+2021-03-11 20:01:20 DEBUG ReimbursementSystemDriver:58 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:55)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 20:01:20 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:01:20 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:39 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:03:40 ERROR ReimbursementSystemDriver:57 - Register failed
+2021-03-11 20:03:40 DEBUG ReimbursementSystemDriver:58 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:55)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:40 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:03:41 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:03:42 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:08:00 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:08:00 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:08:00 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:65 - Registered new user
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-11 20:08:01 INFO  ReimbursementSystemDriver:43 - User successfully logged in.
+2021-03-11 20:08:01 ERROR ReimbursementSystemDriver:57 - Register failed
+2021-03-11 20:08:01 DEBUG ReimbursementSystemDriver:58 - Unable to register new user: 'mantest'
+com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' already exists
+	at com.revature.dao.UserDaoDB.addUser(UserDaoDB.java:76)
+	at com.revature.services.UserService.register(UserService.java:55)
+	at com.revature.ServicesTests.testInvalidRegistration(ServicesTests.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+2021-03-11 20:08:02 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-11 20:08:02 INFO  ReimbursementSystemDriver:274 - Delete success

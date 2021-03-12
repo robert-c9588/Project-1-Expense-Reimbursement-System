@@ -3,8 +3,10 @@ package com.revature;
 import static org.junit.Assert.*;
 
 import org.apache.log4j.xml.Log4jEntityResolver;
+import org.eclipse.jdt.internal.compiler.flow.UnconditionalFlowInfo.AssertionFailedException;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -72,7 +74,9 @@ public class ServicesTests {
 	@Test(expected=UsernameAlreadyExistsException.class)
 	public void testInvalidRegistration() {
 		us.register(testMan);
-		testUser =  us.login(testMan.getUsername(), testMan.getPassword());
-		us.register(testMan);
+		us.register(testUser);
+		this.testUser = us.login(testUser.getUsername(), testUser.getPassword());
+		this.testMan =  us.login(testMan.getUsername(), testMan.getPassword());
+		us.register(this.testMan);
 	}
 }
