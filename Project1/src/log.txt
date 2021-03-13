@@ -5294,3 +5294,112 @@ com.revature.exceptions.UsernameAlreadyExistsException: Username: 'mantest' alre
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
 2021-03-11 20:08:02 INFO  ReimbursementSystemDriver:274 - Delete success
 2021-03-11 20:08:02 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:36 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:37 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:37 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:37 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:37 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:37 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:38 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:39 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:39 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:40 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:41 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:41 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:162 - Read success
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:42 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:43 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:44 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:44 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:44 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:44 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:44 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:45 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:45 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:45 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:45 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:45 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:46 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:46 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:46 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:46 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:46 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:207 - User successfully read from db
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:47 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:48 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:48 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:48 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:48 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-12 13:40:49 INFO  ReimbursementSystemDriver:249 - Write success
+2021-03-12 13:40:50 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-12 13:40:50 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:50 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:50 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:50 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:51 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:52 INFO  ReimbursementSystemDriver:112 - User successfully read from db
+2021-03-12 13:40:52 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:52 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:52 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:52 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:53 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:53 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:53 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:53 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:207 - User successfully read from db
+2021-03-12 13:40:54 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:55 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:55 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:55 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:55 INFO  ReimbursementSystemDriver:61 - Write success
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:162 - User successfully read from db
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:457 - Read success
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:97 - Write success
+2021-03-12 13:40:56 INFO  ReimbursementSystemDriver:274 - Delete success
+2021-03-12 13:40:57 INFO  ReimbursementSystemDriver:274 - Delete success

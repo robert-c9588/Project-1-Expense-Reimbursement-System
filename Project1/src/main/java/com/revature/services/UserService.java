@@ -1,9 +1,10 @@
 package com.revature.services;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.User;
 import com.revature.dao.ReimbursmentDao;
 import com.revature.dao.UserDao;
-import com.revature.driver.ReimbursementSystemDriver;
 import com.revature.exceptions.InvalidCredentialsException;
 import com.revature.exceptions.InvalidUserSettingsException;
 import com.revature.exceptions.UsernameAlreadyExistsException;
@@ -13,6 +14,8 @@ import com.revature.utils.SessionCache;
  * This class contains business logic for performing operations on users
  */
 public class UserService {
+	//private static final Logger logger = Logger.getLogger(UserService.class);
+
 	public SessionCache cache;
 	UserDao userDao;
 	ReimbursmentDao reimbDao;
@@ -36,11 +39,12 @@ public class UserService {
 			SessionCache.setCurrentUser(loggedIn);
 
 		} catch (InvalidCredentialsException e) {
-			ReimbursementSystemDriver.logger.error("Login failed");
-			ReimbursementSystemDriver.logger.debug("User: '" + uname + "'", e);
+		//	logger.error("Login failed");
+		//	logger.debug("User: '" + uname + "'", e);
+			return null;
 
 		}
-		ReimbursementSystemDriver.logger.info("User successfully logged in.");
+	//	logger.info("User successfully logged in.");
 		return loggedIn;
 	}
 
@@ -54,15 +58,15 @@ public class UserService {
 		try {
 			userDao.addUser(newUser);
 		} catch (UsernameAlreadyExistsException e) {
-			ReimbursementSystemDriver.logger.error("Register failed");
-			ReimbursementSystemDriver.logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+		//	logger.error("Register failed");
+		//	logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
 			throw e;
 		} catch (InvalidUserSettingsException e) {
-			ReimbursementSystemDriver.logger.error("Register failed");
-			ReimbursementSystemDriver.logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+		//	logger.error("Register failed");
+		//	logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
 			throw e;
 		}
-		ReimbursementSystemDriver.logger.info("Registered new user");
+	//	logger.info("Registered new user");
 	}
 
 }

@@ -7,15 +7,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.User;
 import com.revature.beans.User.UserRole;
-import com.revature.driver.ReimbursementSystemDriver;
 import com.revature.exceptions.InvalidCredentialsException;
 import com.revature.exceptions.InvalidUserSettingsException;
 import com.revature.exceptions.UsernameAlreadyExistsException;
 import com.revature.utils.ConnectionUtil;
 
 public class UserDaoDB implements UserDao {
+//	private static final Logger logger = Logger.getLogger(UserDaoDB.class);
+
 
 	// TABLE NAME: ers_users
 	/*
@@ -39,11 +42,7 @@ public class UserDaoDB implements UserDao {
 					String sql = "INSERT INTO ers_users (ers_username,ers_password,user_first_name,user_last_name,user_email,user_role_id) VALUES(?,?,?,?,?,?)";
 
 					PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
-//				if (u.getId()!=null) {
-//					ps.setInt(1, u.getId());
-//				}else {
-//					ps.setNull(1, java.sql.Types.INTEGER);
-//				}
+
 					ps.setString(1, u.getUsername());
 					ps.setString(2, u.getPassword());
 					ps.setString(3, u.getFname());
@@ -58,13 +57,13 @@ public class UserDaoDB implements UserDao {
 					ps.execute();
 					ps.close();
 					ps.getConnection().close();
-					ReimbursementSystemDriver.logger.info("Write success");
+			//		logger.info("Write success");
 					u = getUserId(u);
 					return u;
 
 				} catch (SQLException e) {
-					ReimbursementSystemDriver.logger.error("Write failed");
-					ReimbursementSystemDriver.logger.debug("Unable write to db", e);
+				//	logger.error("Write failed");
+				//	logger.debug("Unable write to db", e);
 				}
 			} else {
 				RuntimeException rte = new InvalidUserSettingsException(
@@ -109,15 +108,15 @@ public class UserDaoDB implements UserDao {
 				ps.getConnection().close();
 
 				if (u != null && u.getId().equals(userId)) {
-					ReimbursementSystemDriver.logger.info("User successfully read from db");
+				//	logger.info("User successfully read from db");
 					return u;
 				} else {
 					RuntimeException rte = new InvalidCredentialsException("User not found");
 					throw rte;
 				}
 			} catch (SQLException e) {
-				ReimbursementSystemDriver.logger.error("Read failed");
-				ReimbursementSystemDriver.logger.debug("Unable read from db", e);
+			//	logger.error("Read failed");
+			//	logger.debug("Unable read from db", e);
 			}
 		}
 		RuntimeException rte = new InvalidCredentialsException("User not found");
@@ -159,15 +158,15 @@ public class UserDaoDB implements UserDao {
 
 				if (u.getUsername() != null && u.getUsername().equals(username) && u.getPassword() != null
 						&& u.getPassword().equals(pass)) {
-					ReimbursementSystemDriver.logger.info("User successfully read from db");
+				//	logger.info("User successfully read from db");
 					return u;
 				} else {
 					RuntimeException rte = new InvalidCredentialsException("User not found");
 					throw rte;
 				}
 			} catch (SQLException e) {
-				ReimbursementSystemDriver.logger.error("Read failed");
-				ReimbursementSystemDriver.logger.debug("Unable read from db", e);
+			//	logger.error("Read failed");
+			//	logger.debug("Unable read from db", e);
 			}
 		}
 
@@ -204,11 +203,11 @@ public class UserDaoDB implements UserDao {
 			s.close();
 			s.getConnection().close();
 
-			ReimbursementSystemDriver.logger.info("User successfully read from db");
+		//	logger.info("User successfully read from db");
 			return ulist;
 		} catch (SQLException e) {
-			ReimbursementSystemDriver.logger.error("Read failed");
-			ReimbursementSystemDriver.logger.debug("Unable read from db", e);
+		//	logger.error("Read failed");
+		//	logger.debug("Unable read from db", e);
 		}
 		return ulist;
 	}
@@ -246,12 +245,12 @@ public class UserDaoDB implements UserDao {
 				ps.getConnection().close();
 				u = user;
 
-				ReimbursementSystemDriver.logger.info("Write success");
+			//	logger.info("Write success");
 				return u;
 
 			} catch (SQLException e) {
-				ReimbursementSystemDriver.logger.error("Write failed");
-				ReimbursementSystemDriver.logger.debug("Unable write to db", e);
+			//	logger.error("Write failed");
+			//	logger.debug("Unable write to db", e);
 			}
 		}
 		RuntimeException rte = new InvalidCredentialsException("User does not exist. Cannot update");
@@ -271,12 +270,12 @@ public class UserDaoDB implements UserDao {
 				ps.close();
 				ps.getConnection().close();
 
-				ReimbursementSystemDriver.logger.info("Delete success");
+			//	logger.info("Delete success");
 				return true;
 
 			} catch (SQLException e) {
-				ReimbursementSystemDriver.logger.error("Write failed");
-				ReimbursementSystemDriver.logger.debug("Unable write to db", e);
+			//	logger.error("Write failed");
+			//	logger.debug("Unable write to db", e);
 			}
 		}
 		return false;

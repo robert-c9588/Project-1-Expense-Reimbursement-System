@@ -2,13 +2,16 @@ package com.revature.services;
 
 import java.time.LocalDateTime;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.Reimbursement;
 import com.revature.beans.User;
 import com.revature.dao.ReimbursmentDao;
-import com.revature.driver.ReimbursementSystemDriver;
 import com.revature.exceptions.InvalidArgumentsReimbursementException;
 
 public class ReimbursementService {
+	//private static final Logger logger = Logger.getLogger(ReimbursementService.class);
+
 	public ReimbursmentDao rdao;
 
 	public ReimbursementService(ReimbursmentDao dao) {
@@ -21,8 +24,8 @@ public class ReimbursementService {
 			r = rdao.addReimbursment(r);
 		} catch (InvalidArgumentsReimbursementException e) {
 			r = null;
-			ReimbursementSystemDriver.logger.error("Unable to add reimbursement");
-			ReimbursementSystemDriver.logger.debug("Reimbursment not written to persistence layer", e);
+		//	logger.error("Unable to add reimbursement");
+		//	logger.debug("Reimbursment not written to persistence layer", e);
 		}
 		return r;
 	}
@@ -37,8 +40,8 @@ public class ReimbursementService {
 		try {
 			rdao.updateReimbursement(r);
 		} catch (InvalidArgumentsReimbursementException e) {
-			ReimbursementSystemDriver.logger.error("Unable to udpate status on reimbursement");
-			ReimbursementSystemDriver.logger.debug("Reimbursment not written to persistence layer", e);
+		//	logger.error("Unable to udpate status on reimbursement");
+		//	logger.debug("Reimbursment not written to persistence layer", e);
 		}
 	}
 

@@ -6,12 +6,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-import com.revature.driver.ReimbursementSystemDriver;
+
+import org.apache.log4j.Logger;
+
 
 /**
  * Singleton utility for creating and retrieving database connection
  */
 public class ConnectionUtil {
+	//private static Logger logger = Logger.getLogger(ConnectionUtil.class);
 	private static ConnectionUtil cu = null;
 	private static String url;
 	private static String usr;
@@ -30,7 +33,7 @@ public class ConnectionUtil {
 			usr  = (String) p.getProperty("usr");
 			pswd  = (String) p.getProperty("pswd");
 		}catch(IOException e) {
-			ReimbursementSystemDriver.logger.error("Could not read properties",e);
+		//	logger.error("Could not read properties",e);
 		}
 	}
 	
@@ -49,9 +52,11 @@ public class ConnectionUtil {
 	public Connection getConnection() {
 		Connection conn =  null;
 		try {
+			Class.forName("org.postgresql.Driver");
+
 			conn = DriverManager.getConnection(url, usr, pswd);
-		} catch (SQLException e) {
-			ReimbursementSystemDriver.logger.error("Connection to SQL database could not be established", e);
+		} catch (SQLException | ClassNotFoundException e) {
+		//	logger.error("Connection to SQL database could not be established", e);
 		}
 		return conn;
 		
