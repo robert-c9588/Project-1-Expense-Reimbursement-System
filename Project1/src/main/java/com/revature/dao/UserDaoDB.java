@@ -14,11 +14,10 @@ import com.revature.beans.User.UserRole;
 import com.revature.exceptions.InvalidCredentialsException;
 import com.revature.exceptions.InvalidUserSettingsException;
 import com.revature.exceptions.UsernameAlreadyExistsException;
+import com.revature.logger.ReimbSysLogger;
 import com.revature.utils.ConnectionUtil;
 
 public class UserDaoDB implements UserDao {
-//	private static final Logger logger = Logger.getLogger(UserDaoDB.class);
-
 
 	// TABLE NAME: ers_users
 	/*
@@ -57,13 +56,13 @@ public class UserDaoDB implements UserDao {
 					ps.execute();
 					ps.close();
 					ps.getConnection().close();
-			//		logger.info("Write success");
+					ReimbSysLogger.getReimbSysLogger().getLogger().info("Write success");
 					u = getUserId(u);
 					return u;
 
 				} catch (SQLException e) {
-				//	logger.error("Write failed");
-				//	logger.debug("Unable write to db", e);
+					ReimbSysLogger.getReimbSysLogger().getLogger().error("Write failed");
+					ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable write to db", e);
 				}
 			} else {
 				RuntimeException rte = new InvalidUserSettingsException(
@@ -108,15 +107,15 @@ public class UserDaoDB implements UserDao {
 				ps.getConnection().close();
 
 				if (u != null && u.getId().equals(userId)) {
-				//	logger.info("User successfully read from db");
+					ReimbSysLogger.getReimbSysLogger().getLogger().info("User successfully read from db");
 					return u;
 				} else {
 					RuntimeException rte = new InvalidCredentialsException("User not found");
 					throw rte;
 				}
 			} catch (SQLException e) {
-			//	logger.error("Read failed");
-			//	logger.debug("Unable read from db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable read from db", e);
 			}
 		}
 		RuntimeException rte = new InvalidCredentialsException("User not found");
@@ -158,15 +157,15 @@ public class UserDaoDB implements UserDao {
 
 				if (u.getUsername() != null && u.getUsername().equals(username) && u.getPassword() != null
 						&& u.getPassword().equals(pass)) {
-				//	logger.info("User successfully read from db");
+					ReimbSysLogger.getReimbSysLogger().getLogger().info("User successfully read from db");
 					return u;
 				} else {
 					RuntimeException rte = new InvalidCredentialsException("User not found");
 					throw rte;
 				}
 			} catch (SQLException e) {
-			//	logger.error("Read failed");
-			//	logger.debug("Unable read from db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable read from db", e);
 			}
 		}
 
@@ -203,11 +202,11 @@ public class UserDaoDB implements UserDao {
 			s.close();
 			s.getConnection().close();
 
-		//	logger.info("User successfully read from db");
+			ReimbSysLogger.getReimbSysLogger().getLogger().info("User successfully read from db");
 			return ulist;
 		} catch (SQLException e) {
-		//	logger.error("Read failed");
-		//	logger.debug("Unable read from db", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable read from db", e);
 		}
 		return ulist;
 	}
@@ -245,12 +244,12 @@ public class UserDaoDB implements UserDao {
 				ps.getConnection().close();
 				u = user;
 
-			//	logger.info("Write success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Write success");
 				return u;
 
 			} catch (SQLException e) {
-			//	logger.error("Write failed");
-			//	logger.debug("Unable write to db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Write failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable write to db", e);
 			}
 		}
 		RuntimeException rte = new InvalidCredentialsException("User does not exist. Cannot update");
@@ -270,12 +269,12 @@ public class UserDaoDB implements UserDao {
 				ps.close();
 				ps.getConnection().close();
 
-			//	logger.info("Delete success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Delete success");
 				return true;
 
 			} catch (SQLException e) {
-			//	logger.error("Write failed");
-			//	logger.debug("Unable write to db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Write failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable write to db", e);
 			}
 		}
 		return false;

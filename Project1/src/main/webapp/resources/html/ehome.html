@@ -5,8 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-You have logged in!!!
+<h1>You have logged in!!!</h1>
+	<script>
+		console.log(window.location.pathname);
+		 window.onload = function(){
+				console.log("Window has loaded, script ehome.js is being run");
+				//document.getElementById('swSubmit').addEventListener('click',getSW);
+				console.log("updating");
+				console.log(getUser());
+			};
 
-<script src="../resources/js/ehome.js"></script>
+			async function getUser() {
+				console.log("in getUser()");
+				fetch('http://localhost:8080/Project1--ReimbSys/user.json').then(
+					async function(response) {
+						//console.log(response.json());
+						return response.json();//response consumed
+					}, function(error) {
+						console.log('Panic!!!!');
+					}
+				).then(function(userJSON){
+					console.log(userJSON); //this is were we can manipulate User JSON
+				})
+			};
+
+	</script>
+	<script src="../Project1--ReimbSys/resources/js/ehome.js"></script>
+	
 </body>
 </html>

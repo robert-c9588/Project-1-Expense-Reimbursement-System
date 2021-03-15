@@ -9,12 +9,13 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+import com.revature.logger.ReimbSysLogger;
+
 
 /**
  * Singleton utility for creating and retrieving database connection
  */
 public class ConnectionUtil {
-	//private static Logger logger = Logger.getLogger(ConnectionUtil.class);
 	private static ConnectionUtil cu = null;
 	private static String url;
 	private static String usr;
@@ -33,7 +34,7 @@ public class ConnectionUtil {
 			usr  = (String) p.getProperty("usr");
 			pswd  = (String) p.getProperty("pswd");
 		}catch(IOException e) {
-		//	logger.error("Could not read properties",e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Could not read properties",e);
 		}
 	}
 	
@@ -56,7 +57,7 @@ public class ConnectionUtil {
 
 			conn = DriverManager.getConnection(url, usr, pswd);
 		} catch (SQLException | ClassNotFoundException e) {
-		//	logger.error("Connection to SQL database could not be established", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Connection to SQL database could not be established", e);
 		}
 		return conn;
 		

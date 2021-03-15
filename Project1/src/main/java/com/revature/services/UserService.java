@@ -1,20 +1,19 @@
 package com.revature.services;
 
-import org.apache.log4j.Logger;
-
 import com.revature.beans.User;
 import com.revature.dao.ReimbursmentDao;
 import com.revature.dao.UserDao;
 import com.revature.exceptions.InvalidCredentialsException;
 import com.revature.exceptions.InvalidUserSettingsException;
 import com.revature.exceptions.UsernameAlreadyExistsException;
+import com.revature.logger.ReimbSysLogger;
 import com.revature.utils.SessionCache;
 
 /**
  * This class contains business logic for performing operations on users
  */
 public class UserService {
-	//private static final Logger logger = Logger.getLogger(UserService.class);
+	
 
 	public SessionCache cache;
 	UserDao userDao;
@@ -39,12 +38,12 @@ public class UserService {
 			SessionCache.setCurrentUser(loggedIn);
 
 		} catch (InvalidCredentialsException e) {
-		//	logger.error("Login failed");
-		//	logger.debug("User: '" + uname + "'", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Login failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("User: '" + uname + "'", e);
 			return null;
 
 		}
-	//	logger.info("User successfully logged in.");
+		ReimbSysLogger.getReimbSysLogger().getLogger().info("User successfully logged in.");
 		return loggedIn;
 	}
 
@@ -58,15 +57,15 @@ public class UserService {
 		try {
 			userDao.addUser(newUser);
 		} catch (UsernameAlreadyExistsException e) {
-		//	logger.error("Register failed");
-		//	logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
 			throw e;
 		} catch (InvalidUserSettingsException e) {
-		//	logger.error("Register failed");
-		//	logger.debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
 			throw e;
 		}
-	//	logger.info("Registered new user");
+		ReimbSysLogger.getReimbSysLogger().getLogger().info("Registered new user");
 	}
 
 }

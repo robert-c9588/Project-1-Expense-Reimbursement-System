@@ -13,6 +13,7 @@ public class LoginController {
 
 	public static String login(HttpServletRequest req) {
 		if (!req.getMethod().equals("POST")) {
+			System.out.println("returning home because of POST method");
 			return "resources/html/index.html";
 		}
 		String username = req.getParameter("username");

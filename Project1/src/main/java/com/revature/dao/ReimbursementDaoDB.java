@@ -8,7 +8,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 
 import com.revature.beans.Reimbursement;
 import com.revature.beans.Reimbursement.ReimbStatus;
@@ -17,12 +16,11 @@ import com.revature.beans.User.UserRole;
 import com.revature.beans.User;
 import com.revature.exceptions.InvalidArgumentsReimbursementException;
 import com.revature.exceptions.UnauthorizedException;
+import com.revature.logger.ReimbSysLogger;
 import com.revature.utils.ConnectionUtil;
 import com.revature.utils.SessionCache;
 
 public class ReimbursementDaoDB implements ReimbursmentDao {
-	//private static final Logger logger = Logger.getLogger(ReimbursementDaoDB.class);
-
 
 	// TABLE ers_reimbursements
 	/*
@@ -97,12 +95,12 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				
 				r = getReimbursmentId(r);
 
-//				logger.info("Write success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Write success");
 				return r;
 
 			} catch (SQLException e) {
-//				logger.error("Write failed");
-//				logger.debug("Unable to write to db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Write failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to write to db", e);
 			}
 
 		}
@@ -162,11 +160,11 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				rs.close();
 				ps.close();
 				ps.getConnection().close();
-//				logger.info("Read success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 				return r;
 			} catch (SQLException e) {
-//				logger.error("Read failed");
-//				logger.debug("Unable to read from db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 			}
 		}
 		RuntimeException rte = new InvalidArgumentsReimbursementException("Invalid id number");
@@ -215,11 +213,11 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 			s.close();
 			s.getConnection().close();
 
-//			logger.info("Read success");
+			ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 			return rlist;
 		} catch (SQLException e) {
-//			logger.error("Read failed");
-//			logger.debug("Unable to read from db", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 		}
 		return rlist;
 	}
@@ -269,11 +267,11 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 			ps.close();
 			ps.getConnection().close();
 
-//			logger.info("Read success");
+			ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 			return rlist;
 		} catch (SQLException e) {
-//			logger.error("Read failed");
-//			logger.debug("Unable to read from db", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 		}
 
 		return rlist;
@@ -327,14 +325,14 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				ps.close();
 				ps.getConnection().close();
 
-//				logger.info("Read success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 				return rlist;
 			} catch (SQLException e) {
-//				logger.error("Read failed");
-//				logger.debug("Unable to read from db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 			}
 		}
-	//	logger.warn("User tried to acces approve function when not a manager");
+		ReimbSysLogger.getReimbSysLogger().getLogger().warn("User tried to acces approve function when not a manager");
 		RuntimeException rte = new UnauthorizedException("You are not allowed to access this function");
 		throw rte;
 	}
@@ -391,11 +389,11 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				ps.execute();
 				ps.close();
 				ps.getConnection().close();
-				//logger.info("Update success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Update success");
 				return r;
 			} catch (SQLException e) {
-				//logger.error("Write failed");
-				//logger.debug("Unable to write to db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Write failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to write to db", e);
 			}
 		}
 
@@ -416,10 +414,10 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				ps.setInt(1, r.getId());
 				ps.close();
 				ps.getConnection();
-			//	logger.info("Delete success");
+				ReimbSysLogger.getReimbSysLogger().getLogger().info("Delete success");
 			} catch (SQLException e) {
-		//		logger.error("Delete failed");
-		//		logger.debug("Unable to delete from db", e);
+				ReimbSysLogger.getReimbSysLogger().getLogger().error("Delete failed");
+				ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to delete from db", e);
 			}
 
 		}
@@ -457,11 +455,11 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 			while(rs.next()) {
 				r.setId(rs.getInt(1));
 			}
-		//	logger.info("Read success");
+			ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 			return r;
 		}catch(SQLException e) {
-		//	logger.error("Read failed");
-		//	logger.debug("Unable to read from db", e);
+			ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
+			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 		}
 		
 		return r;
