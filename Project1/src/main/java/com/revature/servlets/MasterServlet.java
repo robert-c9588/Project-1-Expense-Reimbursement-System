@@ -22,8 +22,11 @@ public class MasterServlet extends HttpServlet {
 		 * Checking the URI to see where we need to send the request. 
 		 */
 		if (req.getRequestURI().endsWith(".json")) {
+			System.out.println("received get json");
 			RequestHelper.process(req, res);
 		} else {
+			System.out.println("received get rsys");
+
 			req.getRequestDispatcher(RequestHelper.process(req)).forward(req, res);
 		}
 	}
@@ -32,8 +35,11 @@ public class MasterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		System.out.println("in doPost");
 		if (req.getRequestURI().endsWith(".json")) {
+			System.out.println("received post json");
+
 			RequestHelper.process(req, res);
 		} else {
+			System.out.println("received get rsys");
 			req.getRequestDispatcher(RequestHelper.process(req)).forward(req, res);
 		}
 	}

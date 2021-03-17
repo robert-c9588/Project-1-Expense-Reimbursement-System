@@ -2,35 +2,57 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+
+</head>
+<title>ReimbSys</title>
 </head>
 <body>
-<h1>You have logged in!!!</h1>
-	<script>
-		console.log(window.location.pathname);
-		 window.onload = function(){
-				console.log("Window has loaded, script ehome.js is being run");
-				//document.getElementById('swSubmit').addEventListener('click',getSW);
-				console.log("updating");
-				console.log(getUser());
-			};
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1 id="welcomeh1">Welcome!</h1>
+			</div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
 
-			async function getUser() {
-				console.log("in getUser()");
-				fetch('http://localhost:8080/Project1--ReimbSys/user.json').then(
-					async function(response) {
-						//console.log(response.json());
-						return response.json();//response consumed
-					}, function(error) {
-						console.log('Panic!!!!');
-					}
-				).then(function(userJSON){
-					console.log(userJSON); //this is were we can manipulate User JSON
-				})
-			};
+			<div class="col">
+				<a class="link-primary"
+					href="../Project1--ReimbSys/resources/html/createreimb.html">Create
+					Reimbursement</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col" id="tablediv">
+				<table id="table" class="table table-info table-striped">
+					<thead class="table-info">
+						<tr class="table-info">
+							<th>#</th>
+							<th>Type</th>
+							<th>Amount</th>
+							<th>Submitted</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tr class="table-info"></tr>
+					
+				</table>
+				<h1 id="tableh1"></h1>
+			</div>
+		</div>
+	</div>
 
-	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
 	<script src="../Project1--ReimbSys/resources/js/ehome.js"></script>
-	
 </body>
 </html>

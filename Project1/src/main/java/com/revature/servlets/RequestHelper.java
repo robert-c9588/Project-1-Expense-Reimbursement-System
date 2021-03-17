@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.controllers.EmployeeHomeController;
 import com.revature.controllers.LoginController;
+import com.revature.jsoncontrollers.CreateUserController;
 import com.revature.jsoncontrollers.UserController;
 import com.revature.jsoncontrollers.UserReimbController;
 
@@ -32,17 +33,21 @@ public class RequestHelper extends HttpServlet {
 	}
 
 	public static void process(HttpServletRequest req, HttpServletResponse res)
-			throws JsonProcessingException, IOException {
+			throws ServletException, IOException {
 		System.out.println("Processing request " + req.getRequestURI());
 
 		switch (req.getRequestURI()) {
 		case "/Project1--ReimbSys/user.json":
 			UserController.userFinder(req, res);
+			break;
 		case "/Project1--ReimbSys/ureimb.json":
 			UserReimbController.uReimbFinder(req, res);
-
+			break;
+		case "/Project1--ReimbSys/createuser.json":
+			CreateUserController.createUser(req, res);
+			break;
 		default:
-
+			LoginController.login(req);
 		}
 	}
 }

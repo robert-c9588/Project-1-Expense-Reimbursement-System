@@ -19,13 +19,7 @@ public class ReimbSysLogger {
 	public Logger getLogger() {
 		Logger logger =  null;
 		
-		try {
-			Class.forName("org.apache.log4j.Logger");
-			
-			logger = Logger.getLogger(ReimbSysLogger.class);
-		} catch (ClassNotFoundException e) {
-			System.out.println("Unable to initialize logger.");
-		}
+		logger = Logger.getLogger(ReimbSysLogger.class);
 		return logger;
 	}
 	

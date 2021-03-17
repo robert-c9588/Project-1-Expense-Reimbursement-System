@@ -13,6 +13,9 @@ public class LoginController {
 
 	public static String login(HttpServletRequest req) {
 		if (!req.getMethod().equals("POST")) {
+			req.getSession().setAttribute("loggedUsername", null);
+			req.getSession().setAttribute("loggedPassword", null);
+			req.getSession().setAttribute("loggedId", null);
 			System.out.println("returning home because of POST method");
 			return "resources/html/index.html";
 		}

@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.beans.User;
@@ -18,7 +19,12 @@ public class UserController {
 		
 		UserDao ud = new UserDaoDB();
 		
+		
+		res.setContentType("application/json");
+		
 		User user = ud.getUser(userId);
-		res.getWriter().write(new ObjectMapper().writeValueAsString(user));
+		String validjson = new ObjectMapper().writeValueAsString(user);
+		System.out.println(validjson);
+		res.getWriter().write(validjson);
 	}
 }

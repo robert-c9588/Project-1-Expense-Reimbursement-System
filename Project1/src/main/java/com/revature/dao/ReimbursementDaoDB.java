@@ -8,7 +8,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import com.revature.beans.Reimbursement;
 import com.revature.beans.Reimbursement.ReimbStatus;
 import com.revature.beans.Reimbursement.ReimbType;
@@ -92,7 +91,7 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				ps.execute();
 				ps.close();
 				ps.getConnection().close();
-				
+
 				r = getReimbursmentId(r);
 
 				ReimbSysLogger.getReimbSysLogger().getLogger().info("Write success");
@@ -239,7 +238,12 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				r.setId(rs.getInt(1));
 				r.setAmount(rs.getDouble(2));
 				r.setSubmittedTs(rs.getTimestamp(3).toLocalDateTime());
-				r.setResolvedTs(rs.getTimestamp(4).toLocalDateTime());
+
+				if (rs.getTimestamp(4) != null) {
+					r.setResolvedTs(rs.getTimestamp(4).toLocalDateTime());
+				} else {
+					r.setResolvedTs(null);
+				}
 				r.setDescription(rs.getString(5));
 				// receipt set not implemented.
 				UserDao udao = new UserDaoDB();
@@ -428,8 +432,8 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 	public Reimbursement getReimbursmentId(Reimbursement reimb) {
 		Reimbursement r = reimb;
 		try {
-			String sql =  "SELECT reimb_id FROM ers_reimbursements WHERE reimb_amount=? AND reimb_author=? AND reimb_submitted=? AND reimb_status_id=? AND reimb_type_id=?";
-			
+			String sql = "SELECT reimb_id FROM ers_reimbursements WHERE reimb_amount=? AND reimb_author=? AND reimb_submitted=? AND reimb_status_id=? AND reimb_type_id=?";
+
 			PreparedStatement ps = ConnectionUtil.getConnectionUtil().getConnection().prepareStatement(sql);
 			ps.setDouble(1, r.getAmount());
 			ps.setInt(2, r.getAuthor().getId());
@@ -450,18 +454,18 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 			} else {// If OTHER
 				ps.setInt(5, 4);
 			}
-			
+
 			ResultSet rs = ps.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				r.setId(rs.getInt(1));
 			}
 			ReimbSysLogger.getReimbSysLogger().getLogger().info("Read success");
 			return r;
-		}catch(SQLException e) {
+		} catch (SQLException e) {
 			ReimbSysLogger.getReimbSysLogger().getLogger().error("Read failed");
 			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to read from db", e);
 		}
-		
+
 		return r;
 	}
 }

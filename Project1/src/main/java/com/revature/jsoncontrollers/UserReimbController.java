@@ -26,9 +26,8 @@ public class UserReimbController {
 		User user = ud.getUser(userId);
 		
 		List<Reimbursement>rlist =  rd.getReimbursementsByEmployee(user);
-		
-		
-		
+		System.out.println(new ObjectMapper().writeValueAsString(rlist));
 		res.getWriter().write(new ObjectMapper().writeValueAsString(rlist));
+		
 	}
 }

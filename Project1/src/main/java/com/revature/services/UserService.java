@@ -53,19 +53,20 @@ public class UserService {
 	 * @param newUser the User to be registered
 	 * 
 	 */
-	public void register(User newUser) {
+	public boolean register(User newUser) {
 		try {
 			userDao.addUser(newUser);
 		} catch (UsernameAlreadyExistsException e) {
 			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
 			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
-			throw e;
+			return false;
 		} catch (InvalidUserSettingsException e) {
 			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
 			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
-			throw e;
+			return false;
 		}
 		ReimbSysLogger.getReimbSysLogger().getLogger().info("Registered new user");
+		return true;
 	}
 
 }

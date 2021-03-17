@@ -24,6 +24,16 @@ public class User {
 		super();
 	}
 
+	public User(String username, String password, String fname, String lname, String email) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.roleId = UserRole.EMPLOYEE;
+	}
+
 	public Integer getId() {
 		return id;
 	}

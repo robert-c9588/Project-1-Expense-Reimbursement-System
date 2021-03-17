@@ -13,16 +13,6 @@
   <servlet-mapping>
     <servlet-name>MasterServlet</servlet-name>
     <url-pattern>*.rsys</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>JSONMasterServlet</servlet-name>
-  	<servlet-class>com.revature.servlets.JSONMasterServlet</servlet-class>
-  	<load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>JSONMasterServlet</servlet-name>
-  	<url-pattern>*.json</url-pattern>
-  </servlet-mapping>
-  
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>  
 </web-app>
