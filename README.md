@@ -36,14 +36,11 @@ Run on server index.html and you should see:
 Here you can create an account and login with it.
 There are multiple dummy accounts. I'll give you of them.
 ### Test accounts 
-###### username: 
-test
+###### username: test
+###### password: testp
 
-###### password: 
-testp
-
-username: manager
-password: testp
+###### username: manager
+###### password: testp
 
 Below is a view of the manager's page.
 ![image](https://user-images.githubusercontent.com/79052471/112251778-1b002f00-8c19-11eb-8771-e613b928b190.png)
