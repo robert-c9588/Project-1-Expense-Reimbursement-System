@@ -36,8 +36,11 @@ Run on server index.html and you should see:
 Here you can create an account and login with it.
 There are multiple dummy accounts. I'll give you of them.
 ### Test accounts 
-username: test
-password: testp
+###### username: 
+test
+
+###### password: 
+testp
 
 username: manager
 password: testp
