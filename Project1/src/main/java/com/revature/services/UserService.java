@@ -59,11 +59,11 @@ public class UserService {
 		} catch (UsernameAlreadyExistsException e) {
 			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
 			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
-			return false;
+			throw e;
 		} catch (InvalidUserSettingsException e) {
 			ReimbSysLogger.getReimbSysLogger().getLogger().error("Register failed");
 			ReimbSysLogger.getReimbSysLogger().getLogger().debug("Unable to register new user: '" + newUser.getUsername() + "'", e);
-			return false;
+			throw e;
 		}
 		ReimbSysLogger.getReimbSysLogger().getLogger().info("Registered new user");
 		return true;

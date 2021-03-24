@@ -44,8 +44,10 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 		// checking all reimbursement inputs that must be initialized before adding to
 		// reimbursement db
 
+		System.out.println("in addreimb: " + r);
 		if (r != null && r.getSubmittedTs() != null && r.getStatusid() != null && r.getType() != null
 				&& r.getAuthor() != null && r.getAmount() != null) {
+			System.out.println("adding reimbursement");
 			try {
 				String sql = "INSERT INTO ers_reimbursements (reimb_amount, reimb_submitted, reimb_resolved,"
 						+ " reimb_description, reimb_author, reimb_resolver, reimb_status_id, reimb_type_id) VALUES (?,?,?,?,?,?,?,?)";
@@ -184,8 +186,12 @@ public class ReimbursementDaoDB implements ReimbursmentDao {
 				r.setId(rs.getInt(1));
 				r.setAmount(rs.getDouble(2));
 				r.setSubmittedTs(rs.getTimestamp(3).toLocalDateTime());
-				r.setResolvedTs(rs.getTimestamp(4).toLocalDateTime());
-				r.setDescription(rs.getString(5));
+				if (rs.getTimestamp(4) != null) {
+					r.setResolvedTs(rs.getTimestamp(4).toLocalDateTime());
+				}
+				if (rs.getString(5) != null) {
+					r.setDescription(rs.getString(5));
+				}
 				// receipt set not implemented.
 				UserDao udao = new UserDaoDB();
 				r.setAuthor(udao.getUser(rs.getInt(7)));

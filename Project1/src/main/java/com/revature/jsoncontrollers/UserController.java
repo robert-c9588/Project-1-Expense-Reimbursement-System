@@ -21,7 +21,7 @@ public class UserController {
 		
 		
 		res.setContentType("application/json");
-		
+		 
 		User user = ud.getUser(userId);
 		String validjson = new ObjectMapper().writeValueAsString(user);
 		System.out.println(validjson);

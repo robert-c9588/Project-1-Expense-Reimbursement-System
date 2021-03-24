@@ -10,23 +10,62 @@
 <title>ReimbSys</title>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<h1 class="display-4" id="welcomeh1">ERSystem</h1>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+
+
+				</ul>
+				<form class="d-flex">
+					<a id="logout" class="btn btn-outline-danger" type="button"
+						href="../html/ehome.html">Back</a>
+				</form>
+			</div>
+		</div>
+	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="col"></div>
-			<div class="col">
+			<div class="p-3 border bg-light">
 				<form id="form" accept-charset="utf-8"
 					action="/Project1--ReimbSys/createreimb.json" method="POST">
 					<div class="mb-3">
-						<label for="amount" class="form-label">Amount</label> 
-						<input required name="amount" id="amount" class="form-control" type="text" pattern="^\d+(?:\.\d{0,2})?$" placeholder="Please enter the amount for reimbursement" />
+						<label for="amount" class="form-label">Amount</label> <input
+							required name="amount" id="amount" class="form-control"
+							type="text" pattern="^\d+(?:\.\d{0,2})?$"
+							placeholder="Please enter the amount for reimbursement" />
 					</div>
 					<div class="mb-3">
-						<label for="description" class="form-label">Description</label> 
-						<textarea required name="description" id="description" class="form-control" maxlength="250" rows="3"></textarea>
+						<label for="description" class="form-label">Description</label>
+						<textarea required name="description" id="description"
+							class="form-control" maxlength="250" rows="3"></textarea>
 					</div>
-
-					<button id="submit" class="btn btn-primary mb-3" value="Create">Create
-						Reimbursement</button>
+					<div class="mb-3">
+						<label for="select" class="form-label">What is this reimbursement expense for?</label> <select
+							required name="select" id="select"
+							class="form-select form-select-lg mb-3"
+							aria-label=".form-select-lg example">
+							<option value="">CHOOSE</option>
+							<option value="1">LODGING</option>
+							<option value="2">TRAVEL</option>
+							<option value="3">FOOD</option>
+							<option value="4">OTHER</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<button id="submit" class="btn btn-primary mb-3" value="Create">Create
+							Reimbursement</button>
+					</div>
 				</form>
 
 			</div>

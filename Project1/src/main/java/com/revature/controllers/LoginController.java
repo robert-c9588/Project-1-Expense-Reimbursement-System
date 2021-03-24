@@ -13,15 +13,15 @@ public class LoginController {
 
 	public static String login(HttpServletRequest req) {
 		if (!req.getMethod().equals("POST")) {
-			req.getSession().setAttribute("loggedUsername", null);
-			req.getSession().setAttribute("loggedPassword", null);
-			req.getSession().setAttribute("loggedId", null);
 			System.out.println("returning home because of POST method");
 			return "resources/html/index.html";
 		}
+		req.getSession().setAttribute("loggedUsername", null);
+		req.getSession().setAttribute("loggedPassword", null); 
+		req.getSession().setAttribute("loggedId", null);
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-
+ 
 		UserDao ud = new UserDaoDB();
 		ReimbursementDaoDB rd = new ReimbursementDaoDB();
 
@@ -29,9 +29,11 @@ public class LoginController {
 		UserService us = new UserService(ud, rd);
 		user = us.login(username, password);
 
+
 		if (user == null) {
-			return "invalid.rsys";
+			return "resources/html/index.html";
 		} else {
+
 			req.getSession().setAttribute("loggedUsername", username);
 			req.getSession().setAttribute("loggedPassword", password);
 			req.getSession().setAttribute("loggedId", user.getId());

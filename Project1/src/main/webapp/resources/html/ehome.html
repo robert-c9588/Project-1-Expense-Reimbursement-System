@@ -12,23 +12,36 @@
 <title>ReimbSys</title>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h1 id="welcomeh1">Welcome!</h1>
-			</div>
-			<div class="col"></div>
-			<div class="col"></div>
-			<div class="col"></div>
-			<div class="col"></div>
-			<div class="col"></div>
 
-			<div class="col">
-				<a class="link-primary"
-					href="../Project1--ReimbSys/resources/html/createreimb.html">Create
-					Reimbursement</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<h1 class="display-4" id="welcomeh1">ERSystem</h1>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button><br>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="btn btn-outline-success"
+						aria-current="page"
+						href="../Project1--ReimbSys/resources/html/createreimb.html">Create
+							Reimbursement</a></li>
+
+
+				</ul>
+				<form class="d-flex">
+					<a id="logout" class="btn btn-outline-danger" type="button"
+						href="../Project1--ReimbSys/resources/html/index.html">LOGOUT</a>
+				</form>
 			</div>
 		</div>
+	</nav>
+
+
+
+	<div class="container-md">
 		<div class="row">
 			<div class="col" id="tablediv">
 				<table id="table" class="table table-info table-striped">
@@ -38,17 +51,26 @@
 							<th>Type</th>
 							<th>Amount</th>
 							<th>Submitted</th>
+							<th>Resolved</th>
 							<th>Status</th>
 						</tr>
 					</thead>
-					<tr class="table-info"></tr>
-					
+					<tbody id="tbody1">
+
+					</tbody>
 				</table>
 				<h1 id="tableh1"></h1>
 			</div>
 		</div>
 	</div>
 
+	<script>
+		if (!!window.performance && window.performance.navigation.type === 2) {
+			console.log('Reloading');
+			window.location = "../Project1--ReimbSys/resources/html/index.html";
+		}
+	</script>
+	<script src="../js/ehome.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

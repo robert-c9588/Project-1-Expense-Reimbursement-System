@@ -7,27 +7,11 @@ window.onload = function() {
 	console.log("Window has loaded, script ehome.js is being run");
 	//document.getElementById('swSubmit').addEventListener('click',getSW);
 	//getUser();
-	getUserAJAX();
-	getUserReimbAJAX();
+	isloggedin();
+
 
 };
 
-
-
-async function getUser() {
-	fetch('http://localhost:8080/Project1--ReimbSys/user.json').then(
-		function(response) {
-			console.log(response);
-
-			return response.json();//response consumed
-		}, function() { //rejection behavior
-			console.log('Panic!!!!');
-		}
-	).then(function(userJSON) {
-		console.log(userJSON);
-		userDOMManipulation(userJSON);
-	})
-};
 
 function getUserAJAX() {
 	//step 1: create the xmlhttprequest object
@@ -72,67 +56,140 @@ async function getUserReimbAJAX() {
 	xhr.send();
 }
 
+function isloggedin() {
+	//step 1: create the xmlhttprequest object
+	let xhttp = new XMLHttpRequest();
+
+	//Step 2: create a callback function for the ready state changes.
+	xhttp.onreadystatechange = function() {
+		console.log("the ready state changed");
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			let rtext = xhttp.responseText;
+			//rtext = rtext.slice(0, rtext.length - 2);
+			let userObj = JSON.parse(rtext);
+			console.log(userObj);
+			valid = userObj;
+			validLogin(valid);
+		}
+	}
+
+	//Step 3: create and open the connection to the server 
+	xhttp.open("POST", 'http://localhost:8080/Project1--ReimbSys/validlogin.json');
+
+	//Step 4: send the request
+	xhttp.send();
+}
+
+function logout() {
+	//step 1: create the xmlhttprequest object
+	let xhttp = new XMLHttpRequest();
+
+	//Step 2: create a callback function for the ready state changes.
+	xhttp.onreadystatechange = function() {
+		console.log("the ready state changed");
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			let rtext = xhttp.responseText;
+			//rtext = rtext.slice(0, rtext.length - 2);
+			let userObj = JSON.parse(rtext);
+			console.log(userObj);
+			reimbursements = userObj;
+			//	createTable(reimbursements);
+		}
+	}
+
+	//Step 3: create and open the connection to the server 
+	xhttp.open("POST", 'http://localhost:8080/Project1--ReimbSys/logout.rsys');
+
+	//Step 4: send the request
+	xhttp.send();
+
+
+}
+
+function validLogin(e) {
+	if (e) {
+		getUserAJAX();
+		getUserReimbAJAX();
+	} else {
+		window.location.href='http://localhost:8080/Project1--ReimbSys/resources/html/index.html'
+	}
+
+}
+
 function userDOMManipulation(userJSON) {
 
 	let welcometag = document.getElementById('welcomeh1');
-	welcometag.innerHTML = `Welcome, ${userJSON.username}`
+	welcometag.innerHTML = `ERSystem - Welcome, ${userJSON.username}`
 }
 
 function uReimbDOMManipulation(urJSON) {
 	console.log(urJSON);
-	let table = document.getElementById('table');
+	let body = document.getElementById('tbody1');
 	if (urJSON) {
+		while (body.hasChildNodes()) {
+			console.log('removing node');
+			body.removeChild(body.childNodes[0]);
+		}
 		for (i = 0; i < urJSON.length; i++) {
 			let id = urJSON[i].id;
 			let type = urJSON[i].type;
 			let amount = urJSON[i].amount;
 			let submit = urJSON[i].submittedTs;
+			let resolv = urJSON[i].resolvedTs;
 			let status = urJSON[i].statusid;
 
 			let row = document.createElement("tr");
-			
-			table.appendChild(row);
+
+			body.appendChild(row);
 
 			let idtd = document.createElement("td");
 			let typetd = document.createElement("td");
 			let amounttd = document.createElement("td");
 			let submittd = document.createElement("td");
+			let resolvtd = document.createElement("td");
 			let statustd = document.createElement("td");
 
 
 			idtd.innerHTML = id;
-			typetd.innerHTML =  type;
+			typetd.innerHTML = type;
 			amounttd.innerHTML = amount;
 			submittd.innerHTML = `${submit.monthValue}/${submit.dayOfMonth}/${submit.year}`;
+			if (resolv != null) {
+				resolvtd.innerHTML = `${resolv.monthValue}/${resolv.dayOfMonth}/${resolv.year}`;
+			}
 			statustd.innerHTML = status;
-			
+
 			row.appendChild(idtd);
 			row.appendChild(typetd);
 			row.appendChild(amounttd);
 			row.appendChild(submittd);
+			row.appendChild(resolvtd);
 			row.appendChild(statustd);
-			
+
 			if (status == "APPROVED") {
 				row.className = "table-success";
 				idtd.className = "table-success";
 				typetd.className = "table-success";
 				amounttd.className = "table-success";
-				submittd.className =  "table-success";
-				statustd.className =  "table-success";
+				submittd.className = "table-success";
+				resolvtd.className = "table-success";
+				statustd.className = "table-success";
 			} else if (status == "DENIED") {
 				row.className = "table-danger";
 				idtd.className = "table-danger";
 				typetd.className = "table-danger";
 				amounttd.className = "table-danger";
-				submittd.className =  "table-danger";
-				statustd.className =  "table-danger";
+				submittd.className = "table-danger";
+				resolvtd.className = "table-danger";
+				statustd.className = "table-danger";
 			} else {
 				row.className = "table-info";
 				idtd.className = "table-info";
 				typetd.className = "table-info";
 				amounttd.className = "table-info";
-				submittd.className =  "table-info";
-				statustd.className =  "table-info";
+				submittd.className = "table-info";
+				resolvtd.className = "table-info";
+				statustd.className = "table-info";
 			}
 
 		}

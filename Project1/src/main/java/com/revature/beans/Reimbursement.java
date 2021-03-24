@@ -3,32 +3,29 @@ package com.revature.beans;
 import java.time.LocalDateTime;
 
 public class Reimbursement {
-	
+
 	public static enum ReimbType {
-		//Employees must select the type of reimbursement as: LODGING, TRAVEL, FOOD, or OTHER. 
+		// Employees must select the type of reimbursement as: LODGING, TRAVEL, FOOD, or
+		// OTHER.
 		/*
-		 * When speaking to SQL server will convert these to Integers
-		 * 1 - LODGING
-		 * 2 - TRAVEL
-		 * 3 - FOOD
-		 * 4 - OTHER
+		 * When speaking to SQL server will convert these to Integers 1 - LODGING 2 -
+		 * TRAVEL 3 - FOOD 4 - OTHER
 		 */
-		
+
 		LODGING, TRAVEL, FOOD, OTHER
 	}
-	
+
 	public static enum ReimbStatus {
-		//Reimbursement statuses are: PENDING, APPROVED, or DENIED
+		// Reimbursement statuses are: PENDING, APPROVED, or DENIED
 		/*
-		 * When speaking to SQL server will convert these to Integers
-		 * 0 - DENIED
-		 * 1 - APPROVED
-		 * 2 - PENDING
+		 * When speaking to SQL server will convert these to Integers 0 - DENIED 1 -
+		 * APPROVED 2 - PENDING
 		 * 
 		 */
 		PENDING, APPROVED, DENIED
 
 	}
+
 	private Integer id;
 	private Double amount;
 	private LocalDateTime submittedTs;
@@ -41,6 +38,18 @@ public class Reimbursement {
 
 	public Reimbursement() {
 		super();
+	}
+
+	public Reimbursement(Double amount, LocalDateTime submittedTs, String description, User author, User resolver,
+			ReimbStatus statusid, ReimbType type) {
+		super();
+		this.amount = amount;
+		this.submittedTs = submittedTs;
+		this.description = description;
+		this.author = author;
+		this.resolver = resolver;
+		this.statusid = statusid;
+		this.type = type;
 	}
 
 	public Integer getId() {
@@ -189,6 +198,4 @@ public class Reimbursement {
 				+ ", statusid=" + statusid + ", type=" + type + "]";
 	}
 
-	
-	
 }

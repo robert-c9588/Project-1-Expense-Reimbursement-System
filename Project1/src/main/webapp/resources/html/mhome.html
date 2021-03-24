@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ReimbSys-Manager</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<h1 class="display-4" id="welcomeh1">ERSystem</h1>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"></li>
+					<li class="nav-item"></li>
+
+
+				</ul>
+				<form class="d-flex">
+					<div class="col">
+						<div class="p-3 border bg-light">
+							<button id="filter" class="btn btn-secondary dropdown-toggle"
+								type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+								aria-expanded="false">FILTER</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+								<li><button id="drop-all" class="dropdown-item"
+										type="button">ALL</button></li>
+								<li><button id="drop-pending" class="dropdown-item"
+										type="button">PENDING</button></li>
+								<li><button id="drop-approved" class="dropdown-item"
+										type="button">APPROVED</button></li>
+								<li><button id="drop-denied" class="dropdown-item"
+										type="button">DENIED</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="p-3 border bg-light">
+							<button id='updateButton' type="button" class="btn btn-success"
+								disabled>UPDATE</button>
+						</div>
+					</div>
+					<a id="logout" class="btn btn-outline-danger" type="button"
+						href="../Project1--ReimbSys/resources/html/index.html">LOGOUT</a>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<div class="container-xl">
+		<div class="row">
+			<div class="container-xl">
+				<table id="table" class="table table-primary table-striped">
+					<thead id="htable">
+						<tr class="table-info">
+							<th scope="col">#</th>
+							<th scope="col">Type</th>
+							<th scope="col">User</th>
+							<th scope="col">Amount</th>
+							<th scope="col">Submitted</th>
+							<th scope="col">Status</th>
+							<th scope="col">Description</th>
+							<th scope="col">Approved</th>
+						</tr>
+					</thead>
+					<tbody id='body'>
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		if (!!window.performance && window.performance.navigation.type === 2) {
+			console.log('Reloading');
+			window.location = "../Project1--ReimbSys/resources/html/index.html";
+		}
+	</script>
+	<script src="../Project1--ReimbSys/resources/js/mhome.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+</html>

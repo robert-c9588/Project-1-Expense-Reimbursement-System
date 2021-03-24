@@ -20,7 +20,7 @@ public class CreateUserController {
 		if (!req.getMethod().equals("POST")) {
 			System.out.println("returning home because of POST method");
 			res.sendRedirect("resources/html/index.html");
-		}
+		} 
 		
 		//Get fields
 		System.out.println("in create user control");

@@ -19,7 +19,9 @@ public class ReimbursementService {
 	}
 
 	public Reimbursement createNewReimbursement(Reimbursement reimb) {
-		Reimbursement r = new Reimbursement();
+		Reimbursement r = reimb;
+		System.out.println("in reimbservice");
+		System.out.println(r);
 		try {
 			r = rdao.addReimbursment(r);
 		} catch (InvalidArgumentsReimbursementException e) {

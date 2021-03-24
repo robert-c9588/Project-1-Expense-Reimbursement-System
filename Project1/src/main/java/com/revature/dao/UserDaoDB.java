@@ -35,7 +35,7 @@ public class UserDaoDB implements UserDao {
 		User u = user;
 
 		if (!checkUser(user)) {
-			if (u != null && !u.getUsername().equals(null) && !u.getPassword().equals(null) && u.getRoleId() != null
+			if (u != null && !u.getUsername().isBlank() && !u.getPassword().isBlank() && u.getRoleId() != null
 					&& !u.getEmail().equals(null)) {
 				try {
 					String sql = "INSERT INTO ers_users (ers_username,ers_password,user_first_name,user_last_name,user_email,user_role_id) VALUES(?,?,?,?,?,?)";
@@ -155,7 +155,7 @@ public class UserDaoDB implements UserDao {
 				ps.close();
 				ps.getConnection().close();
 
-				if (u.getUsername() != null && u.getUsername().equals(username) && u.getPassword() != null
+				if (u != null && !u.getUsername().isBlank() && u.getUsername().equals(username) && !u.getPassword().isBlank()
 						&& u.getPassword().equals(pass)) {
 					ReimbSysLogger.getReimbSysLogger().getLogger().info("User successfully read from db");
 					return u;
@@ -220,7 +220,7 @@ public class UserDaoDB implements UserDao {
 	public User updateUser(User user) {
 
 		User u = getUser(user.getId());
-		if (u != null && u.getId() != null && !u.getUsername().equals(null) && !u.getPassword().equals(null)
+		if (u != null && u.getId() != null && !u.getUsername().isBlank() && !u.getPassword().isBlank()
 				&& u.getRoleId() != null) {
 
 			String sql = "UPDATE ers_users SET ers_username=?,ers_password=?,user_first_name=?,user_last_name=?,user_email=?,user_role_id=? WHERE ers_users_id=?";

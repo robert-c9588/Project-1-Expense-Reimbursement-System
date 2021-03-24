@@ -10,6 +10,30 @@
 <title>ReimbSys</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<h1 class="display-4" id="welcomeh1">ERSystem</h1>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					
+
+
+				</ul>
+				<form class="d-flex">
+					<a id="logout" class="btn btn-outline-danger" type="button"
+						href="../html/index.html">Back</a>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+
 	<div class="container">
 		<div class="row"></div>
 
@@ -17,20 +41,34 @@
 		<div class="row"></div>
 		<div class="row">
 			<div class="col"></div>
-			<div class="col-sm">
-				<form id="form" accept-charset="utf-8" action="/Project1--ReimbSys/createuser.json" method="POST">
-					<label for="username" class="form-label">Username</label> 
-					<input required name="username" id="username" class="form-control" type="text" minlength="5" maxlength="20" pattern="^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" placeholder="5-20, 1 upper, 1 number" /> 
-					<label for="password" class="form-label">Password</label> 
-					<input required name="password" id="password" class="form-control" type="password" minlength="8" maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="8-15, 1 upper, 1 special" /> 
-					<label for="firstname" class="form-label">First Name</label> 
-					<input required name="firstname" id="firstname" class="form-control" type="text" minlength="2" maxlength="35" pattern="^[a-zA-Z]*$" placeholder="First Name" /> 
-					<label for="lastname" class="form-label">Last Name</label> 
-					<input required name="lastname" id="lastname" class="form-control" type="text" minlength="2" maxlength="35" pattern="^[a-zA-Z]*$" placeholder="Last Name" />
-					<label for="email" class="form-label">Email</label> 
-					<input required name="email" id="email" class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-					<button id="submit" class="btn btn-primary mb-3" value="Create">Create</button>
-				</form>
+			<div class="col">
+				<div class="p-3 border bg-light">
+
+					<form id="form" accept-charset="utf-8"
+						action="/Project1--ReimbSys/createuser.json" method="POST">
+						<label for="username" class="form-label">Username</label> <input
+							required name="username" id="username" class="form-control"
+							type="text" minlength="5" maxlength="20"
+							pattern="^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$"
+							placeholder="5-20, 1 upper, 1 number" /> <label for="password"
+							class="form-label">Password</label> <input required
+							name="password" id="password" class="form-control"
+							type="password" minlength="8" maxlength="15"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							placeholder="8-15, 1 upper, 1 special" /> <label for="firstname"
+							class="form-label">First Name</label> <input required
+							name="firstname" id="firstname" class="form-control" type="text"
+							minlength="2" maxlength="35" pattern="^[a-zA-Z]*$"
+							placeholder="First Name" /> <label for="lastname"
+							class="form-label">Last Name</label> <input required
+							name="lastname" id="lastname" class="form-control" type="text"
+							minlength="2" maxlength="35" pattern="^[a-zA-Z]*$"
+							placeholder="Last Name" /> <label for="email" class="form-label">Email</label>
+						<input required name="email" id="email" class="form-control"
+							type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+						<button id="submit" class="btn btn-primary mb-3" value="Create">Create</button>
+					</form>
+				</div>
 			</div>
 			<div class="col"></div>
 		</div>
@@ -47,7 +85,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 		crossorigin="anonymous"></script>
-	<script type="text/javascript"
-		src="../js/createuser.js"></script>
+	<script type="text/javascript" src="../js/createuser.js"></script>
 </body>
 </html>
