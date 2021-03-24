@@ -18,6 +18,7 @@ Manager is able to filter requests by status
 
 ## How to setup/use
 Install Maven at the link https://maven.apache.org/install.html
+
 Install Apache Tomcat at the link https://tomcat.apache.org/download-90.cgi
 
 git clone https://github.com/robert-c9588/Project-1-Expense-Reimbursement-System.git
