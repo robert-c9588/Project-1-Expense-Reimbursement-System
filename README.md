@@ -1,2 +1,2 @@
-# project-1---reimb-sys-robert-c
+# Expense Reimbursement System
 Project 1 Reimbursement System
